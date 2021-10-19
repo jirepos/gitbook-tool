@@ -46,7 +46,7 @@ VIsualStudio Code는 JDK 11이상 버전에서 실행된다. java와 maven의 �
 
 ![](<.gitbook/assets/image (41).png>)
 
-JAVA_HOME. MAVEN_HOME 이 환경 변수에 설정되어 있음. Java는 Open JDK 12. 버전 사용
+JAVA\_HOME. MAVEN\_HOME 이 환경 변수에 설정되어 있음. Java는 Open JDK 12. 버전 사용
 
 ![](<.gitbook/assets/image (113).png>)
 
@@ -75,7 +75,7 @@ Preferences > Settings 선택
 
 Tab Size 를 2로 설정
 
-![](<.gitbook/assets/image (42).png>)
+![](<.gitbook/assets/image (42) (1).png>)
 
 ## Java Extension Pack 설치
 
