@@ -129,7 +129,7 @@ Switch to Branch 선택
 
 로컬 브랜치에 생성되고 작업 브랜치로 활성화 된다
 
-![](<.gitbook/assets/image (85).png>)
+![](<.gitbook/assets/image (85) (1).png>)
 
 ## 브랜치 스위칭하기
 
@@ -274,7 +274,7 @@ Git Graph에서 Revert, Drop, Reset 등 지원
 
 ### 단축키
 
-Preferencese > Keyboard Shortcuts 클릭 
+Preferencese > Keyboard Shortcuts 클릭&#x20;
 
 ![](<.gitbook/assets/image (35).png>)
 
