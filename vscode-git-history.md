@@ -41,7 +41,7 @@ VSCode에서는 Chagnes 항목의 'Stage All changes' 버튼을 클릭한다.
 
 
 
-![](<.gitbook/assets/image (13).png>)
+![](.gitbook/assets/image-13.png)
 
 
 
@@ -66,25 +66,25 @@ git push -u --force origin master
 
 Remotes 탭에서 Add Remote 버튼을 클릭한다.
 
-![](<.gitbook/assets/image (104).png>)
+![](.gitbook/assets/image-104.png)
 
 
 
 Remote 이름을 입력한다. 'origin'으로 입력했다. 
 
-![](<.gitbook/assets/image (124).png>)
+![](.gitbook/assets/image-124.png)
 
 
 
 Remote URL을 복사하여 붙여 넣는다. 그리고 엔터키글 입력한다. 
 
-![](<.gitbook/assets/image (9).png>)
+![](.gitbook/assets/image-9.png)
 
 
 
 Remotes 탭에서 origin이 추가된 것을 확인할 수 있다. 
 
-![](<.gitbook/assets/image (46).png>)
+![](.gitbook/assets/image-46.png)
 
 
 

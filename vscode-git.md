@@ -6,15 +6,15 @@
 
 URL 복사
 
-![](<.gitbook/assets/image (19).png>)
+![](.gitbook/assets/image-19.png)
 
 Ctrl+Shift+P 입력하고,Git Clone 입력하고,Git Clone 선택한 다음에 엔터
 
-![](<.gitbook/assets/image (78).png>)
+![](.gitbook/assets/image-78.png)
 
 복사한 URL 붙여 넣기
 
-![](<.gitbook/assets/image (40).png>)
+![](.gitbook/assets/image-40.png)
 
 ### 폴더 선택 및 클론진행
 
@@ -23,113 +23,113 @@ Ctrl+Shift+P 입력하고,Git Clone 입력하고,Git Clone 선택한 다음에 �
 \
 
 
-![](<.gitbook/assets/image (97).png>)
+![](.gitbook/assets/image-97.png)
 
 id/password 입력 후 확인 클릭
 
-![](<.gitbook/assets/image (61).png>)
+![](.gitbook/assets/image-61.png)
 
 Clone 진행 표시
 
-![](<.gitbook/assets/image (21).png>)
+![](.gitbook/assets/image-21.png)
 
 ## Source Control View
 
 Source Contorl 버튼을 클릭하면 이와 같은 화면을 볼 수 있다.
 
-![](<.gitbook/assets/image (74).png>)
+![](.gitbook/assets/image-74.png)
 
 Changes에는 커밋하지 않은 변경된 파일들을 볼 수 있다.
 
-![](<.gitbook/assets/image (6).png>)
+![](.gitbook/assets/image-6.png)
 
 COMMITS에서는 현재 체크아웃 브랜치의 COMMITS를 볼 수 있다.
 
-![](<.gitbook/assets/image (67).png>)
+![](.gitbook/assets/image-67.png)
 
 BRANCHES는 로컬 브랜치를 보여준다.REMOTES에는 원격저장소의 브랜치들을 보여준다.
 
-![](<.gitbook/assets/image (119).png>)
+![](.gitbook/assets/image-119.png)
 
 STASHES는 스태시된 이력을 보여주고 TAGS는 태그들을 보여준다.
 
-![](<.gitbook/assets/image (43).png>)
+![](.gitbook/assets/image-43.png)
 
 ## 버전관리 제외하기
 
 변경된 파일이 4개임을 표시
 
-![](<.gitbook/assets/image (55).png>)
+![](.gitbook/assets/image-55.png)
 
 test.txt를 생성하고 저장하면 Changes에 나타남\
 버전관리를 하지 않을 파일들은 선택하고 Add to .gitignore 클릭
 
-![](<.gitbook/assets/image (93).png>)
+![](.gitbook/assets/image-93.png)
 
 ## State/Unstage 인덱스에 넣기 빼기
 
 index에 넣고 싶으면 파일 선택하고 Stage Changes 선택
 
-![](<.gitbook/assets/image (10).png>)
+![](.gitbook/assets/image-10.png)
 
 또는 + 버튼 클릭
 
 \
 
 
-![](<.gitbook/assets/image (2).png>)
+![](.gitbook/assets/image-2.png)
 
 다시 Unstaged 상태로 돌리고 싶으면 Unstage Changes 선택
 
 \
 
 
-![](<.gitbook/assets/image (50).png>)
+![](.gitbook/assets/image-50.png)
 
 Staged Changed에 들어 간 것을 확인
 
 \
 
 
-![](<.gitbook/assets/image (103).png>)
+![](.gitbook/assets/image-103.png)
 
 ### commit
 
 Commit 버튼 클릭
 
-![](<.gitbook/assets/image (84).png>)
+![](.gitbook/assets/image-84.png)
 
 커밋 메시지 입력
 
-![](<.gitbook/assets/image (63).png>)
+![](.gitbook/assets/image-63.png)
 
 ### commit 이력확인
 
 Git graph 아이콘 클릭
 
-![](<.gitbook/assets/image (30).png>)
+![](.gitbook/assets/image-30.png)
 
 커밋 이력을 확인할 수 있음
 
-![](<.gitbook/assets/image (70).png>)
+![](.gitbook/assets/image-70.png)
 
 ## Check out 로컬 브랜치 생성
 
 Remotes의 브랜치 선택
 
-![](<.gitbook/assets/image (4).png>)
+![](.gitbook/assets/image-4.png)
 
 Switch to Branch 선택
 
-![](<.gitbook/assets/image (98).png>)
+![](.gitbook/assets/image-98.png)
 
 브랜치 명 입력 또는 그냥 엔터키를 누른다
 
-![](<.gitbook/assets/image (90).png>)
+![](.gitbook/assets/image-90.png)
 
 로컬 브랜치에 생성되고 작업 브랜치로 활성화 된다
 
-![](<.gitbook/assets/image (85) (1).png>)
+![](.gitbook/assets/image-85-1.png)
 
 ## 브랜치 스위칭하기
 
@@ -138,7 +138,7 @@ Switch to Branch 선택
 \
 
 
-![](<.gitbook/assets/image (23).png>)
+![](.gitbook/assets/image-23.png)
 
 ## Fetch하기
 
@@ -147,28 +147,28 @@ Remotes의 upstream인 origin을 선택하고 Fetch 클릭
 \
 
 
-![](<.gitbook/assets/image (71).png>)
+![](.gitbook/assets/image-71.png)
 
 ## 원격 저장소 추가
 
 커맨드 창에서 Add Remote 검색
 
-![](<.gitbook/assets/image (39).png>)
+![](.gitbook/assets/image-39.png)
 
 URL 붙여 넣고 엔터
 
-![](<.gitbook/assets/image (44).png>)
+![](.gitbook/assets/image-44.png)
 
 remote 이름 입력
 
-![](<.gitbook/assets/image (109).png>)
+![](.gitbook/assets/image-109.png>)
 
 추가된 리모트 원격 브랜치를 확인할 수 있음
 
 \
 
 
-![](<.gitbook/assets/image (17).png>)
+![](.gitbook/assets/image-17.png)
 
 \
 
@@ -177,15 +177,15 @@ remote 이름 입력
 
 Git Graph View에서 설정 버튼 클릭
 
-![](<.gitbook/assets/image (51).png>)
+![](.gitbook/assets/image-51.png)
 
 Yes Fetch 클릭
 
-![](<.gitbook/assets/image (89).png>)
+![](.gitbook/assets/image-89.png)
 
 Fetch 아이콘 클릭 하여 패치
 
-![](<.gitbook/assets/image (106).png>)
+![](.gitbook/assets/image-106.png)
 
 ## Rebase
 
@@ -194,19 +194,19 @@ Fetch 아이콘 클릭 하여 패치
 \
 
 
-![](<.gitbook/assets/image (88).png>)
+![](.gitbook/assets/image-88.png)
 
 원격 브랜치 선택
 
-![](<.gitbook/assets/image (87).png>)
+![](.gitbook/assets/image-87.png)
 
 Rebase Current on to Upstream 선택. 원격 브랜치의 커멋 위로 현재 브랜치를 올린다는 의미.
 
-![](<.gitbook/assets/image (112).png>)
+![](.gitbook/assets/image-112.png)
 
 Interactive Rebase 선택
 
-![](<.gitbook/assets/image (59).png>)
+![](.gitbook/assets/image-59.png)
 
 로컬에서 커밋한 것을 선택할지를 물어본다. remote에서 가져온 커밋 위로 로컬의 커밋을 올릴 지 물어보는 것이기 때문에 pick을 선택한다. vi 에디터 창이므로 wq!를 입력한다. Eclipse와는 다르게 skip이 보이지 않는다. 선택하지 않으려면 drop 입력
 
@@ -214,21 +214,21 @@ skip을 하면 아무것도 처리되지 않는다. 소스 관리자가 rebase�
 
 만일 그런 경우라면 자신이 로컬에서 커밋하지 않는 파일들은 모두 skip하고 자신이 로컬에서 커밋한 파일들은 pick한 다음에 리베이스를 진행해야 한다.
 
-![](<.gitbook/assets/image (28).png>)
+![](.gitbook/assets/image-28.png)
 
 커맨드 창에 성공했다는 메시지가 표시
 
-![](<.gitbook/assets/image (3).png>)
+![](.gitbook/assets/image-3.png)
 
 커밋 히스토리를 보면 리모트 커밋이 로컬 커밋 아래에 있는 것을 볼 수 있다.
 
-![](<.gitbook/assets/image (60).png>)
+![](.gitbook/assets/image-60.png)
 
 ## Push
 
 푸시 아이콘 클릭
 
-![](<.gitbook/assets/image (116).png>)
+![](.gitbook/assets/image-116.png)
 
 Push 선택\
 푸시할 커밋 갯수가 표시된다.
@@ -236,7 +236,7 @@ Push 선택\
 \
 
 
-![](<.gitbook/assets/image (5).png>)
+![](.gitbook/assets/image-5.png)
 
 ## Compare
 
@@ -245,23 +245,23 @@ Explorer에서 파일 선택
 \
 
 
-![](<.gitbook/assets/image (68).png>)
+![](.gitbook/assets/image-68.png)
 
 Open Time line 선택
 
 \
 
 
-![](<.gitbook/assets/image (108).png>)
+![](.gitbook/assets/image-108.png)
 
 Timeline에 변경 이력이 표시된다.
 
-![](<.gitbook/assets/image (57).png>)
+![](.gitbook/assets/image-57.png)
 
 \
 왼쪽이 이전 버전이고 오른쪽이 최근 선택한 버전
 
-![](<.gitbook/assets/image (96).png>)
+![](.gitbook/assets/image-96.png)
 
 ## Revert, Reset 등
 
@@ -270,13 +270,13 @@ Git Graph에서 Revert, Drop, Reset 등 지원
 \
 
 
-![](<.gitbook/assets/image (65).png>)
+![](.gitbook/assets/image-65.png)
 
 ### 단축키
 
-Preferencese > Keyboard Shortcuts 클릭&#x20;
+Preferencese \> Keyboard Shortcuts 클릭&#x20;
 
-![](<.gitbook/assets/image (35).png>)
+![](.gitbook/assets/image-35.png)
 
 사용할 수 있는 단축키를 표시함
 
@@ -457,4 +457,4 @@ Ctrl+Shift+[      커서가 있는 블럭 접음
   Ctrl+`            Toggle Integrated Terminal
 ```
 
-###
+

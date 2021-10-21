@@ -54,7 +54,7 @@ Installed JDKs 탭에서 보면 두개의 JDK가 설치되었다고 나온다. �
 \
 
 
-![](<.gitbook/assets/image (12).png>)
+![](.gitbook/assets/image-12.png)
 
 > 나의 경우에는 JDK8을 지우고 별도의 디렉터리에 JDK8을 복사해 두었는데, 이 경우에는 당연하게도 Detected JDKs에 8 버전이 표시되지 않는다.
 
@@ -75,13 +75,13 @@ VSCode가 실행하는데 필요한 JDK는 java.home 항목에 설정한다. Mav
 
 Java Tooling Runtime에서는 Java Extenion에 대한 VS Code를 실행하기 위한 JDK를 설정한다. 이 값은 환경 변수 JAVA_HOME의 값을 읽는다.
 
-![](<.gitbook/assets/image (62).png>)
+![](.gitbook/assets/image-62.png)
 
 ### Project를 위한 JDK 설정
 
 Project에서 사용하는 Java Version은 Project JDKs 탭에서 볼수 있다. 설정된 값이 없으면 표 시되지 않는다.
 
-![](<.gitbook/assets/image (94).png>)
+![](.gitbook/assets/image-94.png)
 
 
 
@@ -91,7 +91,7 @@ Project에서 사용하는 Java Version은 Project JDKs 탭에서 볼수 있다.
 
 프로젝트에서만 사용하는 버전을 명시하려면 build script에 버전을 정의해야 한다. 'Click to see how'를 클릭해 보자.
 
-![](<.gitbook/assets/image (117).png>)
+![](.gitbook/assets/image-117.png)
 
 
 
@@ -142,7 +142,7 @@ Preferences > Settings 에서 Java > Configuration > Maven : Global Settings 항
 
 
 
-![](<.gitbook/assets/image (58).png>)
+![](.gitbook/assets/image-58.png)
 
 
 
@@ -150,7 +150,7 @@ Maven: Settings File 항목에 Edit in settings.json 링크를 클릭하여 다�
 
 
 
-![](<.gitbook/assets/image (31).png>)
+![](.gitbook/assets/image-31.png)
 
 ```json
 "maven.settingsFile": "D:\\dev\\apps\\apache-maven-3.6.0\\conf\\settings.xml",
@@ -166,13 +166,13 @@ Maven > Termal: Use Java Home 항목을 선택하여 체크를 푼다.
 
 생성할 수 있는 프로젝트 유형들이 보여진다. 
 
-![](<.gitbook/assets/image (11).png>)
+![](.gitbook/assets/image-11.png)
 
 
 
 Maven이나 Spring Boot를 선택한다. No build Tool은 선택하지 않는다. maven-archetype-quickstart를 선택한다.
 
-![](<.gitbook/assets/image (45).png>)
+![](.gitbook/assets/image-45.png)
 
 
 
@@ -196,7 +196,7 @@ Maven이나 Spring Boot를 선택한다. No build Tool은 선택하지 않는다
 
 위 값을 1.8로 변경하고 다시 컨트롤 팔레트에서 Configure Java Runtime 창을 불러오자. 다음과 같이 보일 것이다. 
 
-![](<.gitbook/assets/image (73).png>)
+![](.gitbook/assets/image-73.png)
 
 
 
@@ -212,7 +212,7 @@ Maven Build는 아래의 URL을 참고한다. [Java build tools in VS Code](http
 
 
 
-![](<.gitbook/assets/image (26).png>)
+![](.gitbook/assets/image-26.png)
 
 
 
@@ -227,7 +227,7 @@ Maven Build는 아래의 URL을 참고한다. [Java build tools in VS Code](http
 
 File > Preferences > Settings 클릭하면 setting UI를 열 수 있음
 
-![](<.gitbook/assets/image (33).png>)
+![](.gitbook/assets/image-33.png)
 
 
 
@@ -253,7 +253,7 @@ default runtime은 단독으로 java 파일을 열 때 사용된다. defaul는 J
 
 
 
-![](<.gitbook/assets/image (99).png>)
+![](.gitbook/assets/image-99.png)
 
 
 
@@ -263,7 +263,7 @@ settings을 열면 이와 같이 보임
 
 
 
-![](<.gitbook/assets/image (79).png>)
+![](.gitbook/assets/image-79.png)
 
 
 
@@ -291,7 +291,7 @@ settings에 다음과 같이 추가한다.
 
 Tomcat for Java를 설치한다.
 
-![](<.gitbook/assets/image (29).png>)
+![](.gitbook/assets/image-29.png)
 
 
 
@@ -303,7 +303,7 @@ start.spring.io에서 패키징을 war로 선택하고 Spring Web 의존성을 �
 
 
 
-![](<.gitbook/assets/image (76).png>)
+![](.gitbook/assets/image-73.png)
 
 다운로드 받은 프로젝트를 VSCode에서 열고 Maven으로 빌드하여 war를 생성한다.
 
@@ -313,19 +313,19 @@ war 파일을 선택하고 우측마우스 클릭하여 Run on Tomcat Server를 
 
 
 
-![](<.gitbook/assets/image (34).png>)
+![](.gitbook/assets/image-34.png)
 
 
 
 TOMCAT SERVERS 아래에 다음과 같이 연동된 구성항목이 표시된다. 
 
-![](<.gitbook/assets/image (48).png>)
+![](.gitbook/assets/image-48.png)
 
 
 
 우측 마우스를 클릭하면 다양한 명령어를 볼 수 있다. 
 
-![](<.gitbook/assets/image (20).png>)
+![](.gitbook/assets/image-20.png)
 
 
 
