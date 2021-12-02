@@ -20,7 +20,7 @@ Ctrl+Shift+P 입력하고,Git Clone 입력하고,Git Clone 선택한 다음에 �
 
 폴더 선택
 
-\
+
 
 
 ![](.gitbook/assets/image-97.png)

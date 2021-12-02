@@ -6,3 +6,5 @@
 * [VScode에서 자바 개발환경 설정](vscode.md)
 * [VsCode에서 git history 초기화](vscode-git-history.md)
 * [Windows에서 git 계정 관리](windows-git.md)
+* [IntelliJ 사용방법](intellij.md)
+* [Git 사용방법](git.md)
