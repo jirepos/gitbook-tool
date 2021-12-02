@@ -57,7 +57,8 @@ git commit -m '여기에 커밋 메시지를 작성한다.'
 ```
 
 ### 커밋 이력 확인
-log를 사용한다. 
+**기본**
+최신순으로 commit history를 볼 수 있다.
 ```shell
 git log
 ```
@@ -72,21 +73,94 @@ commit dd6fdbc0cdc508260d87319e238debc23e3a67fc (HEAD -> master)
 Author: nowsogood <latteonterrace@gmail.com>
 Date:   Wed Dec 1 15:49:18 2021 +0900
 ```
+**아이디와 타이틀만 표시**
 ```shell
 git log --oneline // 커밋 이력 중 커밋 ID 와 타이틀 메시지만 조회
 ```
+**모든 브랜치의 커밋 이력 조회** 
+
 ```shell
 git log --oneline --decorate --graph --all// 모든 브랜치 커밋 이력 조회
 ```
+
+**특정 파일의 커밋 이력 조회** 
 ```shell
-git log --index.html // 특정 파일의 변경 커밋 조회
+git log [파일명]
 ```
+**특정 디렉토리의 커밋 이력 조회** 
 ```shell
-git log -p // diff 를 보여준다.
+git log [폴더명]
 ```
+
+**다른 브랜치의 로그 보기** 
+```shell
+git log [브랜치]
+```
+**원격 브랜치의 로그 보기**
+
+```shell
+git log [리모트 이름]/[브랜치 이름]
+```
+
+**변경 내용과 함께 보기** 
+여러 옵션 중 -p, --patch 는 굉장히 유용한 옵션이다. -p 는 각 커밋의 diff 결과를 보여준다. 다른 유용한 옵션으로 `-2`가 있는데 최근 두 개의 결과만 보여주는 옵션이다:
+
+```shell
+git log -p 
+```
+
+특정 파일만 변경이력과 내용을 볼 수 있다. 
+```shell
+git log -p index.jsp 
+```
+
+**커밋에서 변경한 파일 이름 알기**
+```shell
+git log --name-only 
+```
+뒤에 커밋 아이디르 주면 해당 커밋의 변경된 파일 목록을 볼 수 있다. 
+```shell
+git log --name-only [커밋 아이디]
+```
+
+최근 두 개의 결과만 diff하려면 숫자 옵션을 사용한다. 
 ```shell
 git log -p -2 // 최근 두 개의 결과만 diff 를 보여준다.
 ```
+
+**내가 커밋한 것만 보려면**
+```shell
+git log --author=[이름] 
+```
+
+**머지 히스토리와 함께 보려면**
+```shell
+git log --oneline --graph
+```
+
+**A 브랜치에는 없지만 B 브랜치에 있는 커밋을 보려면**
+두 브랜치에 공통으로 있는 커밋은 생략된다. 
+```shell
+git log [A 브랜치]..[B 브랜치]
+```
+
+A 브랜치는 생략할 수 있다. 
+```shell
+git log ..[B 브랜치]
+```
+
+브랜치를 바꾸면 반대가 된다. 
+```shell
+git log [B 브랜치]..[A 브랜치]
+```
+
+**두 브랜치 사이에 서로 없는 커밋만 보고 싶다면**
+```shell
+git log [A branch]...[B branch]
+```
+
+
+
 
 ### diff
 변경사항을 확인하기 위해서 사용한다. 
@@ -181,6 +255,12 @@ git remote -v
 ```shell
 git remote add [이름] [원격저장소 URL]
 ```
+### 원격 저장소 끊기 
+```shell
+git remote remove [원격저장소 이름]
+```
+
+
 
 ### PUSH할 때 다른 계정으로 push 되어서 권한이 없을 때 
 
@@ -240,6 +320,12 @@ checkout 한다.
 ```shell
 git checkout [브랜치명]
 ```
+
+### 브랜치 삭제 
+```shell
+ git branch -d [브랜치]
+```
+
 ### 원격에 브랜치 생성
 remote add 명령어를 사용하여 원격 저장소를 지정하고 git push를 이용하여 푸시한다. 
 ```shell
