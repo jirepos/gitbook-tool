@@ -224,3 +224,280 @@ Push Commits to 창에서 원격 리파지토리를 선택한다.
 
 커밋 히스토리를 엎어 쓰기 위해서 강제로 푸시하고 싶으면  Force Push를 선택한다. 
 ![](./.gitbook/assets/intellij/2021-12-02-19-25-19.png)
+
+
+
+### Rest 
+
+![](./.gitbook/assets/intellij/2021-12-02-19-40-11.png)
+
+![](./.gitbook/assets/intellij/2021-12-02-19-37-35.png)
+
+* **Soft** 커밋을 선택한 커밋으로 되돌리고 나머지는 staging 상태로 변경
+* **Mixed** 커밋을 선택한 커밋으로 되돌리고 나머지는 스태이징 이전 상태로 변경
+* **Hard** 커밋을 선택한 커밋으로 되돌리고 이전 커밋들은 모두 삭제
+
+### Revert 
+커밋한 내용을 취소한다. 커밋 이전의 상태로 되돌린다.
+
+
+C3 커밋의 소스는 다음과 같이 되어 있다. 
+```java
+package com.example;
+
+public class MyTest {
+    /** 이름 반환 */
+    public String getName() {
+        return "Hello";
+    }
+}
+```
+여기에 메소드를 추가하고 커밋한다. 
+```java
+package com.example;
+
+public class MyTest {
+    /** 이름 반환 */
+    public String getName() {
+        return "Hello";
+    }
+    public int getAge() {
+        return 10;
+    }
+}
+```
+
+커밋 이력은 다음과 같은데 C4를 Revert해보자. 
+```shell
+C4  <-- revert 하면 
+C3 
+C2
+C1 
+```
+Commit History 에서  우측 마우스를 클릭하여 Revert Commit를 선택한다. 
+
+![](./.gitbook/assets/intellij/2021-12-03-07-47-45.png)
+
+
+추가한 메서드가 사라지고 새로운 커밋이 생긴다. 
+```shell
+C5  <-- revert한 커밋 생긴다
+C4  <-- revert 하면 
+C3 
+C2
+C1 
+```
+소스파일을 보면 다시 원래의 소스대로 커밋한 내용이 사라진다. 
+```java
+package com.example;
+
+public class MyTest {
+    /** 이름 반환 */
+    public String getName() {
+
+        return "Hello";
+    }
+}
+```
+
+### Undo commit 
+이번에 다시 getAge() 메서드를 추가하고 커밋한다. 그런 다음에 Undo commit를 하면 커밋 이전 상태, 즉 Staging 상태로 되돌린다. 커밋 이력은 사라진다. 
+
+``
+```shell
+C4  <-- Undo commit하면 커밋이 취소되고 커밋된 파일은 Staging 상태로 되돌아 간다.
+C3 
+C2
+C1 
+```
+다음과 같이 커밋 이력이 변경된다. 
+```shell
+C3 
+C2
+C1 
+```
+
+### Squash 
+여러 개의 커밋을 하나의 커밋으로 변경하고자 할 때 사용한다. 오른쪽 마우스 클릭해서 Squash Commits를 선택한다. 
+```shell
+C4  <-- 선택하고 
+C3  <-- 선택해서 Squash commits 선택한다. 
+C2
+C1 
+```
+커밋 메시지가 표시되는 데 커밋 메시지를 정리한 다음에 OK 클릭한다.
+![](./.gitbook/assets/intellij/2021-12-03-08-21-08.png)
+
+
+```shell
+C3  <-- C3, C4가 합쳐지고 하나의 커밋으로 바뀐다.
+C2
+C1 
+```
+### Drop commmit
+Drop Commit를 선택하면 Commit가 삭제된다. 
+
+### Cherry Pick 
+git cherry-pick이란 다른 브랜치에 있는 커밋을 선택적으로 내 브랜치에 적용시킬 때 사용하는 명령어이다.
+
+master 브랜치에서 다음과 같은 커밋 이력을 가지고 있을 때 dev 브랜치를 생성한다. 
+```shell
+// master branch의 커밋 이력
+C4
+C3  
+C2
+C1 
+```
+dev 브랜치로 체크아웃하고 커밋을 추가한다. 
+```shell
+// dev branch의 커밋 이력 
+C5
+C4
+C3  
+C2
+C1 
+```
+다시 master 브랜치를 체크아웃하고 커밋을 추가한다.  마스터의 커밋 이력은 다음과 같을 것이다. 
+
+```shell
+// 마스터 브랜치의 커밋 이력 
+C6
+C4
+C3  
+C2
+C1 
+```
+이재 dev의 커밋이력에서 커밋을 선택하고 Cherry Pick을 해보자.  master 브랜치를 체크아웃 한 상태에서 해야 한다. 
+
+```shell
+// dev 브랜치의 커밋이력 
+C5 <-- Cherry pick한다.
+C4
+C3  
+C2
+C1 
+```
+그리고 마스터 브랜치의 커밋 이력을 확인한다. 다음과 같이 C5 커밋이 최신 커밋으로 보일 것이다. 
+```shell
+// master branch의 커밋 이력 
+C5  <-- Check pick한 커밋이 최신 커밋이 된다. 
+C6
+C4
+C3  
+C2
+C1 
+```
+
+### Patch 하기 
+
+Patch 파일을 만들어서 배포하고 적용하는 방법을 알아보자.  dev 브랜치에서 새로운 커밋을 하고  오른쪽 마우스 버튼 클릭하여 Create Patch를 클릭한다. 
+
+
+```shell
+// dev branch의 커밋 이력 
+C7  <-- 이 것을 패치로 만든다. 
+C5
+C4
+C3  
+C2
+C1 
+```
+
+적절하게 경로를 선택한다.  Base path와 Encoding은 디폴트를 사용한다. 
+
+![](./.gitbook/assets/intellij/2021-12-03-08-43-01.png)
+
+지정한 경로에 파일이 생성된다. 이제 패치를 master 브랜치로 체크아웃한다. 
+
+
+메인 메뉴에서 Git > Patch > Apply patch를 선택한다.  Select Path 화면에서 패치 파일을 선택한다. 
+
+같은 프로젝트에서 커밋하고 패치파일 만들었으면 커밋을 삭제한 다음에 해야 한다. 
+
+
+![](./.gitbook/assets/intellij/2021-12-03-08-57-58.png)
+
+OK 버튼을 클릭한다.  그러면 Changes 에 패치 내역이 들어 온 것을 확인할 수 있다. 
+
+![](./.gitbook/assets/intellij/2021-12-03-08-59-32.png)
+
+충돌이 있으면 충돌을 해결하고 커밋하면 된다. 
+
+
+### Compare 
+**파일 비교** 
+파일 끼리 비교하는 방법이다. 
+
+* 프로젝트에서 파일을 선택하고 
+* 우측 마우스 클릭
+* Compare With 선택
+* 비교할 파일을 선택한다. 
+
+
+
+**리비전 비교** 
+커밋 이력과 비교하는 방법이다. 
+* 프로젝트에서 파일을 선택하고 
+* 우측 마우스 클릭
+* Git > Compare With Revision 클릭
+* 리비전 선택 
+
+
+**브랜치 비교** 
+브랜치 간에 비교하는 방법이다. 
+
+* 프로젝트에서 파일을 선택하고 
+* 우측 마우스 클릭
+* Git > Compare With Branch 선택
+
+
+
+### Stash 
+
+
+### Rebase 
+master 브랜치에서 다음의 커밋 이력인 상태에서 dev 브랜치를 생성한다. 
+```shell
+// master branch의 커밋 이력 
+C1 
+```
+dev 브랜치를 체크아웃하고 커밋을 추가한다. 
+```shell
+// devr branch의 커밋 이력 
+C2
+C1 
+```
+다시 master 브랜치를 check out한다.  커밋을 두 번 한다. 
+```shell
+C4
+C3
+C1 
+```
+이제 dev 브랜치를 생성했던 시점 커밋인 C1을 기준(base)으로 하여 dev에서 변경된 커밋을 적용하고 다시 그 위해 master에서 추가한 커밋을 두는 리베이스를 해보자. 
+
+* master 브랜치를 체크아웃한다. 
+* Project 탭에서 프로젝트를 선택하고 우측 마우스를 클릭한다음에 Git > Rebase를 선택한다.  
+* rebase할 브랜치 dev를 선택한다.  
+* Modify options에 --interactive를 선택한다. 
+* Rebase 버튼을 클릭한다. 
+
+
+![](./.gitbook/assets/intellij/2021-12-03-09-25-25.png)
+
+
+* Start Rebasing 버튼을 클릭한다. 
+
+![](./.gitbook/assets/intellij/2021-12-03-09-26-32.png)
+
+그러면 master 브랜치의 커밋 이력이 다음과 같이 될 것이다. 
+```shell
+C4 <-- master 브랜치의 커밋을 위로 올린다. 
+C3 <-- master 브랜치의 커밋을 위로 올린다. 
+C2 <--- dev의 커밋 
+C1 
+```
+
+
+
+
+
