@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [개발툴](README.md)
 * [Visual Studio Code 가이드(1)](visual-studio-code-1.md)
 * [VSCode에서 Git 사용 가이드](vscode-git.md)
 * [VScode에서 자바 개발환경 설정](vscode.md)
@@ -8,3 +8,5 @@
 * [Windows에서 git 계정 관리](windows-git.md)
 * [IntelliJ 사용방법](intellij.md)
 * [Git 사용방법](git.md)
+* [Maven (1)](maven-01.md)
+* [Maven (2)](maven-02.md)
