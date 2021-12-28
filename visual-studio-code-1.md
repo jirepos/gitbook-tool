@@ -1,4 +1,4 @@
-# Visual Studio Code 가이드(1)
+# Visual Studio Code 사용가이드
 
 ## 설치전 준비사항
 

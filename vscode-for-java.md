@@ -331,3 +331,67 @@ TOMCAT SERVERS 아래에 다음과 같이 연동된 구성항목이 표시된다
 
 
 Open Server Configuration 명령을 선택하면 server.xml 파일이 열린다. 여기서 포트를 8080에서 80으로 변경이 가능하다.
+
+
+## Multi Project 
+InelliJ로 멀티 모듈 프로젝트를 만들었다. 이것을 VSCode에서 열었을 때 설정하는 방법을 정리한다.  폴더 구조는 다음과 같다. 
+
+```shell
+📂project-folder
+   📂.idea
+   📂framework
+     📄pom.xml
+   📂app
+     📄pomx.xml
+```
+
+
+ VSCode에서 폴더를 열 때는 project-folder를 연다.  
+
+이 폴더를 File \> Save As Workspace...를 선택하여 Workspace로 만들어도 되고 그냥 사용해도 된다. 
+
+왼쪽 Explorer에 보면 "SPRING BOOT DASHBOARD"에 보면 실행할 수 있는 SpringBoot App이 표시된다. 
+
+```shell
+▼  SPRING BOOT DASH BOARD 
+   ● app 
+```
+
+app을 선택하고 실행하면 오류가 나는데 VM arguments에 Spring Profile 정보를 설정하지 않아서 오류가 난다
+
+
+
+```shell
+📂project-folder
+   📂.idea
+   📂.vscode
+   📂framework
+     📄pom.xml
+   📂app
+     📄pomx.xml
+```
+
+
+프로젝트 폴더에 .vscode 폴더가 생성이 되는데 그 아래 launch.json 파일을 열어서 "vmArgs"을 설정한다. 
+```json
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-SogoodApplication<sogood-app>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.sogood.SogoodApplication",
+      "projectName": "sogood-app",
+      "vmArgs": "-Dspring.profiles.active=prod,sqllog",
+      "args": ""
+    }
+  ]
+}
+```
+다시 app을 실행하면 정상적으로 실행이 될 것이다.
+
+
+
+

@@ -1,9 +1,9 @@
 # Table of contents
 
 * [개발툴](README.md)
-* [Visual Studio Code 가이드(1)](visual-studio-code-1.md)
+* [Visual Studio Code 가이드)](visual-studio-code-1.md)
 * [VSCode에서 Git 사용 가이드](vscode-git.md)
-* [VScode에서 자바 개발환경 설정](vscode.md)
+* [VScode에서 자바 개발환경 설정](vscode-for-java.md)
 * [VsCode에서 git history 초기화](vscode-git-history.md)
 * [Windows에서 git 계정 관리](windows-git.md)
 * [IntelliJ 사용방법](intellij.md)
