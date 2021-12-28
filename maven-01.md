@@ -123,7 +123,7 @@ Maven의 Lifecycle은 프로젝트를 빌드하는데 관련된 순차적인 단
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-09-19-22.png)
+![](.gitbook/assets/maven/2021-12-17-09-19-22.png)
 
 
 
@@ -131,7 +131,7 @@ Maven의 Lifecycle은 프로젝트를 빌드하는데 관련된 순차적인 단
 Phase는 Maven의 Build Lifecycle의 한 부분으로 각각의 Phase는 어떤 일을 할지 정의하지 않고 어떤  Goal을 실행할지 설정한다. Plugin의 goal은 생명주기 단계에 붙일 수 있다.  Package Phase에서 Jar Plugin의 jar goal을 실행한다. 
 
 
-![](./.gitbook/assets/maven/2021-12-17-09-20-40.png)
+![](.gitbook/assets/maven/2021-12-17-09-20-40.png)
 
 
 
@@ -145,7 +145,7 @@ GOAL은 표준 GOAL이나 다른 GOAL과 함께 실행되며 빌드의 일부분
 Maven으로 의미있는 작업을 하기 위해서는 Plugin을 다운 받아야 한다. 명령을 실행하면 자동으로 다운를 받는다. Maven의 대부분의 책임을 maven 생명주기에 영향을 주고 goal에 대한 접근을 제공하는 Plugin에 위힘하도록 되어 있다. Plugin은 여러개의 Goal을 가지고 있고 Goal은 Plugin에 포함되어 있는 명령이다. 즉 Plugin은 하나 이상의 Goal의 집합체이다. 
 
 
-![](./.gitbook/assets/maven/22021-12-17-09-21-42.png)
+![](.gitbook/assets/maven/22021-12-17-09-21-42.png)
 
 
 
@@ -795,7 +795,7 @@ file : 주어진 파일이름의 파일이 존재할 때 activation이 실행된
 여기에 src/main/resources 폴더를 추가한 후, 개발환경별로 폴더를 따로 만들었다.(dev, alpha, real)
 그 이후에 설정 파일을 넣어 주었다.(db.properties) 
 
-![](./.gitbook/assets/maven/2021-12-17-10-30-58.png)
+![](.gitbook/assets/maven/2021-12-17-10-30-58.png)
 
 
 ### 설정파일 내용(db.properties) 

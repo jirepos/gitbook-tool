@@ -126,15 +126,15 @@ mvn clean
 \<execution\>에서 오류가 표시된다. 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-36-09.png)
+![](.gitbook/assets/maven/2021-12-17-11-36-09.png)
 
 \<exuction\>에 마우스 커서를 갖다대면 아래 그림과 같이 표시된다.  “Mark goal clean as ignored in pom.xml” 을 선택한다. 
 
-![](./.gitbook/assets/maven/2021-12-17-11-36-52.png)
+![](.gitbook/assets/maven/2021-12-17-11-36-52.png)
 
 그러면 아래 그림이 표시된다. OK 버튼을 클릭한다. 
 
-![](./.gitbook/assets/maven/2021-12-17-11-37-23.png)
+![](.gitbook/assets/maven/2021-12-17-11-37-23.png)
 
 \<pluginManagement\>에  다음이 추가된다.
 
@@ -362,7 +362,7 @@ mvn site
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-45-26.png)
+![](.gitbook/assets/maven/2021-12-17-11-45-26.png)
 
 
 위 그림에서  최상위 POM 프로젝트를 상속받은 자식 프로젝트들이 두 개가 있다. B프로젝트와 E 프로젝트가 해당된다. 다시 B프로젝트는 C와 D를 하위 프로젝트로 두고 있다. 그런데 이런 구조를 왜 만들어야 할까? 한 번쯤은 고민해 볼 일이다. 
@@ -392,18 +392,18 @@ B 프로젝트는 여러개의 프로젝트를 가지는 프로젝트이다. 이
 ### 프로젝트 생성
 New \> Other \> Maven \> Maven Project를 선택한다. 
 
-![](./.gitbook/assets/maven/2021-12-17-11-46-28.png)
+![](.gitbook/assets/maven/2021-12-17-11-46-28.png)
 
 Create a simple project(skip archetype selection)을 체크한다. 
 
 Group Id, Artifact Id에 적절한 값을 입력한다. 여기서는 com.andy를 Group Id로 하고 Artifact Id를 andy-base로 입력한다. 
 
-![](./.gitbook/assets/maven/2021-12-17-11-47-44.png)
+![](.gitbook/assets/maven/2021-12-17-11-47-44.png)
 
 
 Version은 그대로 두어도 되고 packaging을 pom으로 선택해야 한다. Package Explorer로 보면 생성된andy-base 프로젝트가 보인다. 
 
-![](./.gitbook/assets/maven/2021-12-17-11-48-17.png)
+![](.gitbook/assets/maven/2021-12-17-11-48-17.png)
 
 
 
@@ -414,7 +414,7 @@ Group Id에는 com.andy를 입력하고, Artifact Id에는 andy-myapp를 입력�
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-48-56.png)
+![](.gitbook/assets/maven/2021-12-17-11-48-56.png)
 
 
 
@@ -422,13 +422,13 @@ Group Id에는 com.andy를 입력하고, Artifact Id에는 andy-myapp를 입력�
 프로젝트가 생성되면 다음과 같이 보인다. 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-49-22.png)
+![](.gitbook/assets/maven/2021-12-17-11-49-22.png)
 
 
 pom.xml을 열어보면 GroupId is duplicate of parent groupid라고 나온다.
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-49-52.png)
+![](.gitbook/assets/maven/2021-12-17-11-49-52.png)
 
 
 
@@ -436,7 +436,7 @@ pom.xml을 열어보면 GroupId is duplicate of parent groupid라고 나온다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-50-16.png)
+![](.gitbook/assets/maven/2021-12-17-11-50-16.png)
 
 
 andy-webapp는 두개의 자식 프로젝트를 가질 것이고 Maven에서는 andy-webapp를 multi-module 프로젝트라고 한다. 하나씩 프로젝트를 만든다. 
@@ -446,7 +446,7 @@ New \> Other \> Maven \> Maven Module를 선택한다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-50-56.png)
+![](.gitbook/assets/maven/2021-12-17-11-50-56.png)
 
 
 
@@ -456,7 +456,7 @@ Module Name을 andy-common이라고 입력한다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-53-11.png)
+![](.gitbook/assets/maven/2021-12-17-11-53-11.png)
 
 
 
@@ -466,12 +466,12 @@ maven-archetype-quickstart를 선택한다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-53-39.png)
+![](.gitbook/assets/maven/2021-12-17-11-53-39.png)
 
 
 디폴트를 선택하고 Finish 버튼을 클릭한다.
 
-![](./.gitbook/assets/maven/2021-12-17-11-54-05.png)
+![](.gitbook/assets/maven/2021-12-17-11-54-05.png)
 
 프로젝트가 생성된 것을 확인해 본다. 
 
@@ -480,18 +480,18 @@ maven-archetype-quickstart를 선택한다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-54-31.png)
+![](.gitbook/assets/maven/2021-12-17-11-54-31.png)
 
 
 Package Explorer 에서 보면 andy-common인 andy-webapp안에도 보이고 같은 레벨에서도 보이지만 실제로는 andy-webapp안에 들어있다.
 
-![](./.gitbook/assets/maven/2021-12-17-11-55-06.png)
+![](.gitbook/assets/maven/2021-12-17-11-55-06.png)
 
 
 Eclipse에서는 독립적인 프로젝트로써 작업을 할 수 있도록 지원하고 있다. 하지만 하나의 소스 디렉토리 안에서 관리된다는 것을 확인할 수 있다. 나머지 webapp 프로젝트도 생성해 본다. 여기서는 예제를 간단히 하기 위해서 webapp 타입이 아닌 quick type을 선택한다. 이름이 andy-web인 모듈을 생성한다. 생성된 전체 프로젝트는 아래 그림과 같이 보일 것이다. 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-55-27.png)
+![](.gitbook/assets/maven/2021-12-17-11-55-27.png)
 
 
 ### 프로젝트 의존관계 만들기
@@ -499,21 +499,21 @@ Eclipse에서는 독립적인 프로젝트로써 작업을 할 수 있도록 지
 andy-common에 Java Bean을 하나 만든다. StringUtil 클래스를 만들 것이다. org.andy.common.util 패키지를 생성한다. StringUtil class를 생성한다. 두개의 문자열을 합치는 append 메서드를 다음과 같이 만든다. 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-56-11.png)
+![](.gitbook/assets/maven/2021-12-17-11-56-11.png)
 
 
 andy-common을 빌드한다. andy-common을 빌드하기 전에 먼저 andy-base를 빌드한다. 자동으로 빌드가 되어야 하지만 잘 안되는 경우도 있다. 순서대로 빌드하도록 한다. andy-base 프로젝트에서  Run As > Maven Install을 선택한다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-56-46.png)
+![](.gitbook/assets/maven/2021-12-17-11-56-46.png)
 
 
 BUILD SUCCESS라고 보이면 성공이다. 빌드를 하면 사용자 디렉토리의 .m2 디렉토리 아래에 pom 파일이 만들어 졌다는 메시지를 볼 수 있다. 
 
 andy-common도 같은 방법으로 빌드한다. 이번에는 jar 파일과 pom 파일이 만들어 졌다는 메시지를 볼 수 있다. 
 
-![](./.gitbook/assets/maven/2021-12-17-11-57-17.png)
+![](.gitbook/assets/maven/2021-12-17-11-57-17.png)
 
 
 
@@ -522,7 +522,7 @@ andy-common도 같은 방법으로 빌드한다. 이번에는 jar 파일과 pom 
 pom.xml 파일을 열고 dependency 요소에 다음과 같이 정의한다. 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-57-42.png)
+![](.gitbook/assets/maven/2021-12-17-11-57-42.png)
 
 
 이제 andy-web은 andy-common을 의존하게 된다. andy-web 프로젝트에 TestCas를 하나 만들어서 테스트 해본다.  com.andy.web 패키지를 만든다. StringUtilTest Test Case를 만든다. 
@@ -530,7 +530,7 @@ pom.xml 파일을 열고 dependency 요소에 다음과 같이 정의한다.
 
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-58-11.png)
+![](.gitbook/assets/maven/2021-12-17-11-58-11.png)
 
 
 실행하면 :1122”가 출력된다. 

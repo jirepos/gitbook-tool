@@ -2499,12 +2499,12 @@ mvn package 를 실행했다.
 
 XX-with-dependencies.jar 파일을 열어보면  org.net.sf.json이 포함되어 있고,
 
-![](./.gitbook/assets/maven/2021-12-17-11-26-18.png)
+![](.gitbook/assets/maven/2021-12-17-11-26-18.png)
 
 test-maven-0.0.1-SNAPSHOT.jar를 열어보면 의존하는 jar가 포함되지 않았다.
 
 
-![](./.gitbook/assets/maven/2021-12-17-11-26-44.png)
+![](.gitbook/assets/maven/2021-12-17-11-26-44.png)
 
 
 ####  custom assembly descriptiors

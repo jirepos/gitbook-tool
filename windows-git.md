@@ -13,7 +13,7 @@ git push <저장소명> <브랜치명>
 
 자격증명이 없는 경우 로그인을 요구한다.&#x20;
 
-![](.gitbook/assets/image-85.png)
+![](.gitbook/assets/wingit/image-85.png)
 
 Windows 자격증명 관리에서 자격증명이 등록되어 있는지 확인한다.  자격증명 프로그램은 윈도우즈 검색 매뉴를 사용하여 검색한다.&#x20;
 
@@ -21,7 +21,7 @@ Windows 자격증명 관리에서 자격증명이 등록되어 있는지 확인�
 
 **제어판 - 사용자 계정 - 자격증명 관리자**
 
-![](.gitbook/assets/image-42.png)
+![](.gitbook/assets/wingit/image-42.png)
 
 **프로젝트의 이름 및 이메일 확인**
 

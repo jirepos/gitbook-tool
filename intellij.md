@@ -6,16 +6,16 @@
 ### Maven 설정 
 settings.xml에서 Maven Home path와 User Settings file 설정한다. 
 
-![](./.gitbook/assets/intellij/2021-12-02-15-24-55.png) 
+![](.gitbook/assets/intellij/2021-12-02-15-24-55.png) 
 
 
 ### editor \> file encodings 설정
-![](./.gitbook/assets/intellij/2021-12-02-15-30-10.png)
+![](.gitbook/assets/intellij/2021-12-02-15-30-10.png)
 
 
 
 ### tomcat 서버 추가
-![](./.gitbook/assets/intellij/2021-12-02-15-32-52.png)
+![](.gitbook/assets/intellij/2021-12-02-15-32-52.png)
 
 ### JDK 설정 
 #### Platform Settings
@@ -26,14 +26,14 @@ Project Structure에서 Platform Settings 클릭한다. SDKS에서 JDK를 설정
 Project Structure에서 Project Settings를 클릭한다. Project SDK에 Project가 사용하는 JDK를 설정한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-02-15-37-15.png)
+![](.gitbook/assets/intellij/2021-12-02-15-37-15.png)
 
 
 ### Memory 설정
 
 "z" 키를 두 번 누른다. 
 
-![](./.gitbook/assets/intellij/2021-12-02-15-42-50.png)
+![](.gitbook/assets/intellij/2021-12-02-15-42-50.png)
 
 
 ```shell
@@ -52,7 +52,7 @@ Settings > Build, Execution.. > Compiler에서 Share build process heap size를 
 
 > 설정하지 않으면 GC overhead limit exceeded ... 이런 에러가 나다. 
 > 
-![](./.gitbook/assets/intellij/2021-12-02-16-32-55.png)
+![](.gitbook/assets/intellij/2021-12-02-16-32-55.png)
 
 
 GC overhead limit exceeded 발생시
@@ -63,6 +63,27 @@ file encoding이 없으면 다음을 추가한다.
 -Dfile.encoding=UTF-8
 ```
 
+### SpringBoot 사용 시 VM 옵션 설정 
+
+실행하려면 SpringBoot Application main 메서드에서 실행 버튼을 클릭한다. 
+
+Edit Configuration 선택
+
+![](.gitbook/assets/intellij/2021-12-28-12-05-11.png)
+
+Add VM Options을 선택한다. 
+
+![](.gitbook/assets/intellij/2021-12-28-12-03-52.png)
+
+JDK 설정 아래의 박스 친 곳에 옵션값을 설정한다. 
+![](.gitbook/assets/intellij/2021-12-28-12-10-47.png)
+
+
+```shell
+-Dspring.profiles.active=prod,sqllog
+```
+
+
 
 ## 프로젝트 생성 
 ### 새로운 프로젝트 생성 
@@ -70,7 +91,7 @@ file encoding이 없으면 다음을 추가한다.
 File > New > Project를 선택한다.  Empty Project를 선택한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-02-16-40-07.png)
+![](.gitbook/assets/intellij/2021-12-02-16-40-07.png)
 
 이클립스에서 프로젝트는 IntelliJ에서는 모듈이라고 부른다. 프로젝트는 이클립스의 워크 스페이스라고 생가하면 된다. 
 
@@ -80,12 +101,12 @@ File > New > Project를 선택한다.  Empty Project를 선택한다.
 
 새창을 열고 냐고 물어 본다. 새창으로 열겠다. 
 
-![](./.gitbook/assets/intellij/2021-12-02-16-43-39.png)
+![](.gitbook/assets/intellij/2021-12-02-16-43-39.png)
 
 
 Project Structure 창이 열리고 모듈을 입력하라고 나온다. 일단 cancel 버튼을 클릭하여 취소한다.  그러면 다음 이미지와 같이 보일 것이다. 
 
-![](./.gitbook/assets/intellij/2021-12-02-16-45-36.png)
+![](.gitbook/assets/intellij/2021-12-02-16-45-36.png)
 
 
 ### git에서 clone하기 
@@ -98,7 +119,7 @@ VCS > Get From Version Control 을 클릭한다.
 리파지토리 이름이 aaa.git 이면 aaa를 입력한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-02-16-56-08.png)
+![](.gitbook/assets/intellij/2021-12-02-16-56-08.png)
 
 프로젝트를 열거냐고 물어보는데 cancel 버튼을 클릭한다.  다음과 같이 디렉터리 구조가 될 것이다. 
 
@@ -113,7 +134,7 @@ VCS > Get From Version Control 을 클릭한다.
 File > Project Structure를 클릭한다.  Modules 항목을 선택하고 '+' 버튼을 클릭한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-02-18-30-12.png)
+![](.gitbook/assets/intellij/2021-12-02-18-30-12.png)
 
 Select File or Directory to Import 창에서 Clone한 프로젝트 폴더를 선택한다.  Import Module 창에서 Maven 프로젝트이면 Maven을 선택하고 Gradle 프로젝트이면 Gradle을 선택한다. 
 
@@ -135,7 +156,7 @@ Select File or Directory to Import 창에서 Clone한 프로젝트 폴더를 선
 
 
 ### 커밋 이력 확인 
-![](./.gitbook/assets/intellij/2021-12-02-19-16-36.png)
+![](.gitbook/assets/intellij/2021-12-02-19-16-36.png)
 **브랜치 커밋 이력 확인**
 ```shell
   All       // 전체 브랜치 커밋 이력 확인 
@@ -196,7 +217,7 @@ Local 이름 확인은 '--local' 옵션사용.
 
 ### Fetch 
 Git pannel의 왼쪽 사이드 아이콘 바에서 Fetch All Remotes 선택 
-![](./.gitbook/assets/intellij/2021-12-01-12-30-44.png)
+![](.gitbook/assets/intellij/2021-12-01-12-30-44.png)
 
 
 
@@ -204,7 +225,7 @@ Git pannel의 왼쪽 사이드 아이콘 바에서 Fetch All Remotes 선택
 Git 메뉴에서 Update Project를 선택하면 Merge할 것인지 Rebase할 것인지 물어 본다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-01-12-14-42.png)
+![](.gitbook/assets/intellij/2021-12-01-12-14-42.png)
 
 
 
@@ -212,26 +233,26 @@ Git 메뉴에서 Update Project를 선택하면 Merge할 것인지 Rebase할 것
 Git 패널에서 작업 브랜치를 선택하고 우측 마우스를 클릭한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-02-19-19-50.png)
+![](.gitbook/assets/intellij/2021-12-02-19-19-50.png)
 
 Push를 선택한다. 
 
-![](./.gitbook/assets/intellij/2021-12-02-19-20-40.png)
+![](.gitbook/assets/intellij/2021-12-02-19-20-40.png)
 
 Push Commits to 창에서 원격 리파지토리를 선택한다. 
 
-![](./.gitbook/assets/intellij/2021-12-02-19-24-31.png)
+![](.gitbook/assets/intellij/2021-12-02-19-24-31.png)
 
 커밋 히스토리를 엎어 쓰기 위해서 강제로 푸시하고 싶으면  Force Push를 선택한다. 
-![](./.gitbook/assets/intellij/2021-12-02-19-25-19.png)
+![](.gitbook/assets/intellij/2021-12-02-19-25-19.png)
 
 
 
 ### Rest 
 
-![](./.gitbook/assets/intellij/2021-12-02-19-40-11.png)
+![](.gitbook/assets/intellij/2021-12-02-19-40-11.png)
 
-![](./.gitbook/assets/intellij/2021-12-02-19-37-35.png)
+![](.gitbook/assets/intellij/2021-12-02-19-37-35.png)
 
 * **Soft** 커밋을 선택한 커밋으로 되돌리고 나머지는 staging 상태로 변경
 * **Mixed** 커밋을 선택한 커밋으로 되돌리고 나머지는 스태이징 이전 상태로 변경
@@ -276,7 +297,7 @@ C1
 ```
 Commit History 에서  우측 마우스를 클릭하여 Revert Commit를 선택한다. 
 
-![](./.gitbook/assets/intellij/2021-12-03-07-47-45.png)
+![](.gitbook/assets/intellij/2021-12-03-07-47-45.png)
 
 
 추가한 메서드가 사라지고 새로운 커밋이 생긴다. 
@@ -326,7 +347,7 @@ C2
 C1 
 ```
 커밋 메시지가 표시되는 데 커밋 메시지를 정리한 다음에 OK 클릭한다.
-![](./.gitbook/assets/intellij/2021-12-03-08-21-08.png)
+![](.gitbook/assets/intellij/2021-12-03-08-21-08.png)
 
 
 ```shell
@@ -405,7 +426,7 @@ C1
 
 적절하게 경로를 선택한다.  Base path와 Encoding은 디폴트를 사용한다. 
 
-![](./.gitbook/assets/intellij/2021-12-03-08-43-01.png)
+![](.gitbook/assets/intellij/2021-12-03-08-43-01.png)
 
 지정한 경로에 파일이 생성된다. 이제 패치를 master 브랜치로 체크아웃한다. 
 
@@ -415,11 +436,11 @@ C1
 같은 프로젝트에서 커밋하고 패치파일 만들었으면 커밋을 삭제한 다음에 해야 한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-03-08-57-58.png)
+![](.gitbook/assets/intellij/2021-12-03-08-57-58.png)
 
 OK 버튼을 클릭한다.  그러면 Changes 에 패치 내역이 들어 온 것을 확인할 수 있다. 
 
-![](./.gitbook/assets/intellij/2021-12-03-08-59-32.png)
+![](.gitbook/assets/intellij/2021-12-03-08-59-32.png)
 
 충돌이 있으면 충돌을 해결하고 커밋하면 된다. 
 
@@ -482,12 +503,12 @@ C1
 * Rebase 버튼을 클릭한다. 
 
 
-![](./.gitbook/assets/intellij/2021-12-03-09-25-25.png)
+![](.gitbook/assets/intellij/2021-12-03-09-25-25.png)
 
 
 * Start Rebasing 버튼을 클릭한다. 
 
-![](./.gitbook/assets/intellij/2021-12-03-09-26-32.png)
+![](.gitbook/assets/intellij/2021-12-03-09-26-32.png)
 
 그러면 master 브랜치의 커밋 이력이 다음과 같이 될 것이다. 
 ```shell
