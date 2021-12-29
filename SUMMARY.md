@@ -22,6 +22,8 @@
 * [Gradle (07) -build.gradle #5 Method ](gradle-07-build-gradle-05.md)
 * [Gradle (08) -build.gradle #6 Plugin ](gradle-08-build-gradle-06.md)
 * [Gradle (09) -build.gradle #7 Project API ](gradle-09-build-gradle-07.md)
-* [Gradle (10) -buildScript #1 ](gradle-10-build-script-01.md)
+* [Gradle (10) -build.gradle #8 Dependencies](gradle-10-build-gradle-08.md)
+* [Gradle (11) -build.gradle #9 공통 설정 ](gradle-11-build-gradle-09.md)
+* [Gradle (77) -Multi-module project#1 ](gradle-77-multi-module-project.md)
 * [Gradle (88) -Howto](gradle-88-how-to.md)
 

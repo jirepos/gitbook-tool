@@ -1,4 +1,4 @@
-# Gadle (9) - build.gradle #7 응용
+# Gadle (9) - build.gradle #7 Project API
 
 ## Project API
 
