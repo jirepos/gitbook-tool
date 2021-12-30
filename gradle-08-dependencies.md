@@ -1,4 +1,4 @@
-# Gadle (12) - build.gradle #9 의존성 관리 
+# Gradle (8) 의존성 관리 
 
 ## Local 라이브러리 모듈 의존성 설정하기 
 프로젝트를 구성할 때 Local에 정의된 모듈의 의존을 정의하는 방법이다. Local의 모듈 혹은 프로젝트를 끌어와서 사용하는 경우에는 settings.gradle 파일에 설정 된 "include:"로 정의한 프로젝트의 이름과 같아야 한다. 

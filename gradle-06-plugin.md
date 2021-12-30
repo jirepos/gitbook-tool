@@ -1,4 +1,4 @@
-# Gadle (8) - build.gradle #6 Plugin
+# Gradle (6)  Plugin
 
 ## Java 플러그인 
 

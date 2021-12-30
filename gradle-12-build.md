@@ -1,4 +1,4 @@
-# Gradle (2) - Java 또는 JVM 프로젝트 Build하기 
+# Gradle (12) Java 또는 JVM 프로젝트 Build하기 
 
 > 이 문서의 내용는 java 또는 JVM 프로젝트를 빌드하는 것에 배경지식을 얻는데 활용한다. 더 자세한 내용은 Rererences를 참고한다. 
 

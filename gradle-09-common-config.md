@@ -1,4 +1,5 @@
-# Gadle (11) - build.gradle #9 
+# Gradle (9) 공통 설정 적용 
+
 
 
 ## 공통 설정 적용

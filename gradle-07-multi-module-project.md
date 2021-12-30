@@ -1,4 +1,4 @@
-# Gadle (77) - Multi-module project 
+# Gadle (7)  Multi-module project 
 
 먼저, IDE는 VSCode를 사용하여 설명한다. 
 
@@ -233,4 +233,44 @@ dependencies {
     implementation  project(':core')
 }
 ```
+
+## 다른 프로젝트 소스 참조
+예룰들어 common library를 개발하는 개발자는 common library의 repository에는 접근할 수 있지만 다른 개발자들은 접근할 수 없다. 보통 다른 개발자들은 dependencies에 jar 파일을 포함하여 개발을 한다. 그러가 common library를 개발하는 개발자는 디버깅이 필요할 수도 있다. 이런 경우 다른 프로젝트의 소스를 참고할 수 있도록 설정이 필요하다. 
+
+
+IntelliJ에서는 두 개의 프로젝트를 모듈로 추가한다. VSCode에서는 같은 폴더 아래 두거나 workspace로 묶는다. 같은 폴더에 두는 것이 좋다. 
+
+다음과 같은 구조일 것이다. 
+
+```shell
+📂common-lib-project 
+   📄settings.gradle  
+📂web-project 
+  📂web
+    📄build.gradle      
+  📄settings.gradle  
+```
+각각이 settings.gradle 파일이 있으므로 디폴트로 소스를 참고할 수는 없다. 
+
+이럴 때는 web-project에서 settings에 다음과 같이 설정한다. 
+```shell
+// settings.gradle
+project(':common').projectDir =new File(settingsDir, '../common-lib-project')
+```
+
+web-project의 build.gradle에서는 다음과 같이 jar 의존성을 추가한다. 
+```shell
+// web-project/web/build.gradle
+dependencies {
+    implementation 'com.sogood:my-core:1.0.0'
+}
+```
+
+
+그런데 이런 식으로 설정하려면 jar 파일은 maven local repository에 배포되어야 한다. 
+
+
+
+
+
 

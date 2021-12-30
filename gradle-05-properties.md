@@ -1,4 +1,5 @@
-# Gadle (4) - build.gradle #2 Properties
+# Gadle (5) - Properties
+ 
  
 
 ## 프러퍼티 사용 
@@ -9,7 +10,7 @@ build script 파일에서 프러퍼티를 사용할 수 있는 프러퍼티들�
 * gradle.properties를 통해 프라퍼티를 추가할 수 있다.
 * $USER_HOME/.gradle/gradle.properties 혹은
 * 프로젝트홈/gradle.properties
-* $USER_HOME에 있는 것이 우선한다.
+* **$USER_HOME에 있는 것이 우선한다.**
 * 여기 지정된 값을 project 객체를 통해 접근할 수 있다.
 * -P프라퍼티명=값으로 project 객체에 프라퍼티를 추가한다.
 * 환경변수 ORG_GRADLE_PROJECT_프라퍼티이름=값으로 project 객체에 프라퍼티를 추가한다.

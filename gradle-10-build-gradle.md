@@ -1,4 +1,4 @@
-# Gadle (3) - build.gradle   #1 build.gradle 개요 
+# Gadle (10) build.gradle
 
 
 

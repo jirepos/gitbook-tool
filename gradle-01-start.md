@@ -1,5 +1,9 @@
 # Gadle (1) - 시작하기 
 
+이 문서는 그래들 공식사이트의 문서를 참고로 작성했다.  프로젝트를 생성하고 프로젝트의 구조를 이해하기 위한 문서이다. 
+
+* **그래들 버전: 7.3.3**
+
 ## 설치하기 
 
 [그래들 공식사이트](https://gradle.org/install/)를 참고한다. 
@@ -8,11 +12,13 @@
 * 그래들의 현재(2021.12.29) 버전은 7.3.3이다. 
 
 
-**다운로드**
+### 다운로드
 [릴리스](https://gradle.org/releases/) 사이트로 가서 최신버전 7.3.3을 다운로드 받는다. binary-only를 받는다. 
 
 
 * 적당한 경로에 압축을 푼다. 
+
+### 환경변수 설정
 
 **환경변수 설정** 
 * Advanced System Settings \> Environment Variables를 선택한다. 
@@ -28,50 +34,13 @@ Gradle 7.3.3
 ------------------------------------------------------------
 ```
 
-### GRADLE_HOME
+
+
 GRADLE_HOME과 GRADLE_USER_HOME 환경변수를 설정한다. 
 
 > **주의:**
 > GRADLE_USER_HOME과 mavenLocalRepository는 같이 쓸 수 없다. 저장하는 방식이 다르다. gradle은 다른 파일들과 함께 jar 파일들을 다음의 경로에 저장한다. 
 > D:\{GRADLE_USER_HOME}\caches\modules-2\files-2.1
-
-
-
-
-
-
-
-### gradle.properties
-gradle.properties를 홈디렉토리에 만들어두면 편리하다.
-OS별 홈디렉토리는 다음과 같다. 
-
-**Mac OS X**
-/Users/<username>/.gradle/
-**Linux**
-/home/<username>/.gradle/
-**Windows Vista & 7+**
-C:\Users\<username>\.gradle\
-
- 이런 방식에서 주의할 점은, 홈 디렉토리에 있는 gradle.properties 파일은 프로젝트 디렉토리에 있는 gradle.properties를 오버라이드 하며, 다른 모든 gradle 프로젝트가 참조하게 되므로, property가 중복되지 않도록 하려면 property 이름이 프로젝트 이름을 포함하도록 짓는 것이 좋다.
-
-**스크립트에서 사용할 인증 정보 분리해 두기** 
-
-```shell
-mavenUser=anuser
-mavenPassword=a123
-```
-빌드 스크립트의 계정/비밀번호 필요한 부분
-```shell
-ploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "http://.../nexus/content/repositories/snapshots/") {
-                authentication(userName: mavenUser, password: mavenPassword)
-            }
-        }
-    }
-}
-```
 
 
 
@@ -133,6 +102,8 @@ Source package (default: demo): <-- 엔터
 BUILD SUCCESSFUL
 2 actionable tasks: 2 executed
 ```
+
+
 init task는 다음의 구조를 생성할 것이다.
 ```shell
 ├── gradle ①
@@ -171,8 +142,6 @@ init task는 다음의 구조를 생성할 것이다.
 * gradle/wrapper/gradle-wrapper.properties 는 Gradle Wrapper 설정파일이다. 
 * gradlew는 gradle 명령어 파일.  gradlew는 unix용 파일이고 gradlew.bat은 윈도우용 파일.
 * settings.gradle는 프로젝트 설정 정보 파일이다. 멀티 프로젝트를 구성할 때 하위 프로젝트들과의 관계를 여기서  정의해야 한다. 명시된 정보를 기준으로 프로젝트를 구성한다.
-
-
 
 
 
@@ -291,6 +260,40 @@ PS D:\temp\demo>
 
 
 
+
+
+
+### gradle.properties
+gradle.properties를 홈디렉토리에 만들어두면 편리하다.
+OS별 홈디렉토리는 다음과 같다. 
+
+**Mac OS X**
+/Users/<username>/.gradle/
+**Linux**
+/home/<username>/.gradle/
+**Windows Vista & 7+**
+C:\Users\<username>\.gradle\
+
+ 이런 방식에서 주의할 점은, 홈 디렉토리에 있는 gradle.properties 파일은 프로젝트 디렉토리에 있는 gradle.properties를 오버라이드 하며, 다른 모든 gradle 프로젝트가 참조하게 되므로, property가 중복되지 않도록 하려면 property 이름이 프로젝트 이름을 포함하도록 짓는 것이 좋다.
+
+**스크립트에서 사용할 인증 정보 분리해 두기** 
+
+```shell
+mavenUser=anuser
+mavenPassword=a123
+```
+빌드 스크립트의 계정/비밀번호 필요한 부분
+```shell
+ploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://.../nexus/content/repositories/snapshots/") {
+                authentication(userName: mavenUser, password: mavenPassword)
+            }
+        }
+    }
+}
+```
 
 
 

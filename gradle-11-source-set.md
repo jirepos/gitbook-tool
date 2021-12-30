@@ -1,4 +1,4 @@
-# Gadle (5) - build.gradle #3 Sourset 
+# Gradle (11))  SourceSets 
 
 ## SourceSet 
 프로젝트를 빌드하게 되면 디폴트로 src/main/java 디렉토리의 파일이 빌드된다. 디폴트 폴더가 아닌 다른 경록의 소스를 컴파일 하는 경우에는 SrouceSets를 사용하여 경로를 변경할 수 있다.
