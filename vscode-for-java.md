@@ -157,6 +157,13 @@ Maven: Settings File 항목에 Edit in settings.json 링크를 클릭하여 다�
 
 Maven > Termal: Use Java Home 항목을 선택하여 체크를 푼다.
 
+**Maven\>Executable:Path** 
+Preferences\>Settings 선택한다. 
+mvaen.excutable를 검색한다 
+Maven\>Executable:Path에 mvn 파일 이름까지 포함한 경로를 입력한다. 
+```shell
+D:\dev\apps\apache-maven-3.6.0\bin\mvn
+```
 
 
 ## Java Project 생성
