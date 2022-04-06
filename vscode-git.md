@@ -74,21 +74,19 @@ index에 넣고 싶으면 파일 선택하고 Stage Changes 선택
 
 또는 + 버튼 클릭
 
-\
+
 
 
 ![](.gitbook/assets/vscode/image-2.png)
 
 다시 Unstaged 상태로 돌리고 싶으면 Unstage Changes 선택
 
-\
 
 
 ![](.gitbook/assets/vscode/image-50.png)
 
 Staged Changed에 들어 간 것을 확인
 
-\
 
 
 ![](.gitbook/assets/vscode/image-103.png)
@@ -113,6 +111,16 @@ Git graph 아이콘 클릭
 
 ![](.gitbook/assets/vscode/image-70.png)
 
+
+## 이력 보기 
+Explorer 창에서 파일을 선택하고 우측 마우스 버튼을 클릭한다. Open File History를 선택한다. 
+
+![](.gitbook/assets/vscode/open-file-history.png)
+
+File History 섹션에 파일이 커밋된 이력이 표시된다. 
+
+![](.gitbook/assets/vscode/file-history-window.png)
+
 ## Check out 로컬 브랜치 생성
 
 Remotes의 브랜치 선택
@@ -135,7 +143,7 @@ Switch to Branch 선택
 
 작업 브랜치로 변경하려는 브랜치를 선택하고 Switch to Branch 선택
 
-\
+
 
 
 ![](.gitbook/assets/vscode/image-23.png)
@@ -144,7 +152,6 @@ Switch to Branch 선택
 
 Remotes의 upstream인 origin을 선택하고 Fetch 클릭
 
-\
 
 
 ![](.gitbook/assets/vscode/image-71.png)
@@ -165,12 +172,9 @@ remote 이름 입력
 
 추가된 리모트 원격 브랜치를 확인할 수 있음
 
-\
 
 
 ![](.gitbook/assets/vscode/image-17.png)
-
-\
 
 
 ## 추가된 원격저장소에서 패치하기
@@ -191,7 +195,6 @@ Fetch 아이콘 클릭 하여 패치
 
 로컬에 두 개의 커밋이 있음
 
-\
 
 
 ![](.gitbook/assets/vscode/image-88.png)
@@ -233,7 +236,6 @@ skip을 하면 아무것도 처리되지 않는다. 소스 관리자가 rebase�
 Push 선택\
 푸시할 커밋 갯수가 표시된다.
 
-\
 
 
 ![](.gitbook/assets/vscode/image-5.png)
@@ -242,14 +244,11 @@ Push 선택\
 
 Explorer에서 파일 선택
 
-\
 
 
 ![](.gitbook/assets/vscode/image-68.png)
 
 Open Time line 선택
-
-\
 
 
 ![](.gitbook/assets/vscode/image-108.png)
@@ -258,7 +257,6 @@ Timeline에 변경 이력이 표시된다.
 
 ![](.gitbook/assets/vscode/image-57.png)
 
-\
 왼쪽이 이전 버전이고 오른쪽이 최근 선택한 버전
 
 ![](.gitbook/assets/vscode/image-96.png)
@@ -267,7 +265,6 @@ Timeline에 변경 이력이 표시된다.
 
 Git Graph에서 Revert, Drop, Reset 등 지원
 
-\
 
 
 ![](.gitbook/assets/vscode/image-65.png)
