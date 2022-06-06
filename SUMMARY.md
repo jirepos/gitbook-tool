@@ -1,6 +1,7 @@
 # Table of contents
 
 * [개발툴](README.md)
+* [Copilot](copilot.md)
 * VSCode
   * [Visual Studio Code 가이드](visual-studio-code-1.md)
   * [VSCode에서 Git 사용 가이드](vscode-git.md)
@@ -9,6 +10,7 @@
   * [VsCode Web 사용법](vscode-web.md)
 * [IntelliJ 사용방법](intellij.md)
 * [Git 사용방법](git.md)
+  * [Windows에서 Git 사용방법](windows-git.md)
 * Maven
   * [Maven (1)](maven-01.md)
   * [Maven (2)](maven-02.md)
