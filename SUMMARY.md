@@ -17,6 +17,7 @@
   * [Maven (3)](maven-03.md)
   * [Maven Multi Module Project](maven-04.md)
   * [Maven 문제 해결](maven-05.md)
+  * [relativePath](maven-06-relativepath.md)
 * Gradle
   * [Gradle (01) 시작하기](gradle-01-start.md)
   * [Gradle (02) 단위 프로젝트](gradle-02-single-project.md)
